@@ -854,25 +854,25 @@
             <img src="8.png" alt="Betrieb / Standort Dreiländereck" style="width:100%;border-radius:12px;object-fit:cover;height:300px;display:block;margin-top:1.5rem;">
         </div>
 
-        <form class="form" onsubmit="handleSubmit(event)" style="padding-top:3rem;">
+        <form class="form" action="https://formspree.io/f/xlgvngbg" method="POST" style="padding-top:3rem;">
             <div class="f-row">
                 <div class="f-group">
                     <label>Ihr Name *</label>
-                    <input type="text" placeholder="Max Mustermann" required>
+                    <input type="text" name="name" placeholder="Max Mustermann" required>
                 </div>
                 <div class="f-group">
                     <label>E-Mail-Adresse *</label>
-                    <input type="email" placeholder="max@beispiel.de" required>
+                    <input type="email" name="email" placeholder="max@beispiel.de" required>
                 </div>
             </div>
             <div class="f-row">
                 <div class="f-group">
                     <label>Telefonnummer</label>
-                    <input type="tel" placeholder="+49 ...">
+                    <input type="tel" name="telefon" placeholder="+49 ...">
                 </div>
                 <div class="f-group">
                     <label>Leistung</label>
-                    <select>
+                    <select name="leistung">
                         <option value="">– bitte wählen –</option>
                         <option>Türmontage</option>
                         <option>Fenstermontage</option>
@@ -886,7 +886,7 @@
             </div>
             <div class="f-group">
                 <label>Ihr Anliegen *</label>
-                <textarea placeholder="Beschreiben Sie kurz Ihr Projekt…" required></textarea>
+                <textarea name="nachricht" placeholder="Beschreiben Sie kurz Ihr Projekt…" required></textarea>
             </div>
             <div>
                 <button type="submit" class="btn btn-dark" id="submitBtn">

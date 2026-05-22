@@ -882,25 +882,25 @@
             <p class="contact-text">
                 Beschreiben Sie kurz Ihr Vorhaben. Wir melden uns innerhalb von 24 Stunden – unverbindlich und ohne Kosten.
             </p>
-            <form class="form" onsubmit="handleSubmit(event)">
+            <form class="form" action="https://formspree.io/f/xlgvngbg" method="POST">
                 <div class="f-row">
                     <div class="f-group">
                         <label>Ihr Name *</label>
-                        <input type="text" placeholder="Max Mustermann" required>
+                        <input type="text" name="name" placeholder="Max Mustermann" required>
                     </div>
                     <div class="f-group">
                         <label>E-Mail-Adresse *</label>
-                        <input type="email" placeholder="max@beispiel.de" required>
+                        <input type="email" name="email" placeholder="max@beispiel.de" required>
                     </div>
                 </div>
                 <div class="f-row">
                     <div class="f-group">
                         <label>Telefonnummer</label>
-                        <input type="tel" placeholder="+49 ...">
+                        <input type="tel" name="telefon" placeholder="+49 ...">
                     </div>
                     <div class="f-group">
                         <label>Leistung</label>
-                        <select>
+                        <select name="leistung">
                             <option value="">– bitte wählen –</option>
                             <option>Türmontage</option>
                             <option>Fenstermontage</option>
@@ -914,7 +914,7 @@
                 </div>
                 <div class="f-group">
                     <label>Ihr Anliegen *</label>
-                    <textarea placeholder="Beschreiben Sie kurz Ihr Projekt…" required></textarea>
+                    <textarea name="nachricht" placeholder="Beschreiben Sie kurz Ihr Projekt…" required></textarea>
                 </div>
                 <div>
                     <button type="submit" class="btn btn-dark" id="submitBtn">

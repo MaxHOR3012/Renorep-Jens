@@ -500,20 +500,45 @@
         }
 
         @media (max-width: 640px) {
+            html, body { overflow-x: hidden; }
             .nav-links { display: none; }
             .hamburger { display: flex; }
             .svc-grid, .t-grid { grid-template-columns: 1fr; }
             .about-stats { grid-template-columns: 1fr 1fr; }
             .f-row { grid-template-columns: 1fr; }
-            .hero-stats { gap: 2rem; }
             footer { flex-direction: column; gap: 1.5rem; text-align: center; }
             .f-nav { flex-wrap: wrap; justify-content: center; gap: 1rem; }
             .form { padding-top: 0.5rem !important; }
 
+            /* Stern auf Mobile immer verstecken */
+            .star-badge { display: none !important; }
+            .star-badge-mobile { display: none !important; }
+
+            /* Label-Zeile nicht abschneiden */
+            .hero-label { white-space: normal !important; overflow: hidden; font-size: 0.68rem !important; }
+
+            /* Stats 2x2 */
+            .hero-stats {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 1.25rem !important;
+            }
+            .hero-stats > div { min-width: 0; overflow: hidden; }
+            .hs-lbl { font-size: 0.72rem !important; word-break: break-word; }
+
+            /* Texte nicht abschneiden */
+            .hero h1 { font-size: 2.4rem !important; }
+            .hero-sub { max-width: 100% !important; font-size: 0.95rem !important; }
+            .hero-ctas { max-width: 100% !important; }
+
             /* Mobile Hero Background */
-            .hero { overflow: hidden; }
+            .hero { overflow: hidden; max-width: 100vw; }
             .hero-content {
                 position: relative;
+                padding: 100px 1.25rem 2.5rem !important;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
                 background: url('hero-mobile-bg.png') 30% center / cover no-repeat;
             }
             .hero-content::before {
